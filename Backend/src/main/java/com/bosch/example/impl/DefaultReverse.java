@@ -19,7 +19,7 @@ public class DefaultReverse implements Reverse {
 
     @Override
     public Boolean palindrome(String word, String reverseWord) {
-        if (word == reverseWord) {
+        if (word.equals(reverseWord)) {
             return true;
         } else {
             return false;
