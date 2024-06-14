@@ -18,6 +18,7 @@ public class DefaultCollatz implements Collatz {
                     current = (3 * current) + 1;
             }
 
+            System.out.println(current);
             return current;
         }
     }

@@ -5,9 +5,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 import com.bosch.example.impl.DefaultCollatz;
+import com.bosch.example.impl.DefaultCwbRegister;
 import com.bosch.example.impl.DefaultImgExponential;
 import com.bosch.example.impl.DefaultReverse;
 import com.bosch.example.services.Collatz;
+import com.bosch.example.services.CwbRegister;
 import com.bosch.example.services.ImgExponential;
 import com.bosch.example.services.Reverse;
 
@@ -27,7 +29,13 @@ public class DependenciesConfiguration {
 
     @Bean
     @Scope("singleton")
-    public ImgExponential calculate() {
+    public ImgExponential imgExponential() {
         return new DefaultImgExponential();
+    }
+
+    @Bean
+    @Scope("singleton")
+    public CwbRegister cwbRegister() {
+        return new DefaultCwbRegister();
     }
 }
