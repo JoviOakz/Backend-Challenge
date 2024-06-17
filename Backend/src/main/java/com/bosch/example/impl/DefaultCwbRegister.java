@@ -1,8 +1,8 @@
 package com.bosch.example.impl;
 
-import com.bosch.example.services.CwbRegister;
+import com.bosch.example.services.CwbRegisterService;
 
-public class DefaultCwbRegister implements CwbRegister {
+public class DefaultCwbRegister implements CwbRegisterService {
     @Override
     public String validateCEP(String cep) {
 

@@ -1,5 +1,5 @@
 package com.bosch.example.services;
 
-public interface Collatz {
+public interface CollatzService {
     Integer collatz(int current, int step);
 }

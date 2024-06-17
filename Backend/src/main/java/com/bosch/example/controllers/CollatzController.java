@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bosch.example.dto.CollatzResult;
-import com.bosch.example.services.Collatz;
+import com.bosch.example.services.CollatzService;
 
 @RestController
 public class CollatzController {
     @Autowired
-    Collatz validator;
+    CollatzService validator;
 
     @GetMapping("/collatz")
     public CollatzResult validate(@RequestParam Integer current, @RequestParam Integer step) {

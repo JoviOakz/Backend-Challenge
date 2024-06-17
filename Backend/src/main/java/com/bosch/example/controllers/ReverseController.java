@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bosch.example.dto.ReverseResult;
-import com.bosch.example.services.Reverse;
+import com.bosch.example.services.ReverseService;
 
 @RestController
 public class ReverseController {
     @Autowired
-    Reverse validator;
+    ReverseService validator;
 
     @GetMapping("reverse/{word}")
     public ReverseResult validate(@PathVariable String word) {

@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bosch.example.dto.CwbRegisterResult;
-import com.bosch.example.services.CwbRegister;
+import com.bosch.example.services.CwbRegisterService;
 
 @RestController
 public class CwbRegisterController {
     @Autowired
-    CwbRegister validator;
+    CwbRegisterService validator;
 
     @GetMapping("curitiba")
     public CwbRegisterResult validate(@RequestParam String cep, @RequestParam String cpf) {

@@ -1,8 +1,8 @@
 package com.bosch.example.impl;
 
-import com.bosch.example.services.Reverse;
+import com.bosch.example.services.ReverseService;
 
-public class DefaultReverse implements Reverse {
+public class DefaultReverse implements ReverseService {
     @Override
     public String reverse(String word) {
         if (word == null)

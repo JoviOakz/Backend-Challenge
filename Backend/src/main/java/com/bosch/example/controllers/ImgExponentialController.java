@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bosch.example.dto.ImgExponentialResult;
-import com.bosch.example.services.ImgExponential;
+import com.bosch.example.services.ImgExponentialService;
 
 @RestController
 public class ImgExponentialController {
     @Autowired
-    ImgExponential validator;
+    ImgExponentialService validator;
 
     @GetMapping("imaexp")
     public ImgExponentialResult validate(@RequestParam Long A, @RequestParam Long b) {

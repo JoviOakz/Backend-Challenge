@@ -3,9 +3,9 @@ package com.bosch.example.impl;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.bosch.example.services.Collatz;
+import com.bosch.example.services.CollatzService;
 
-public class DefaultCollatz implements Collatz {
+public class DefaultCollatz implements CollatzService {
     @Override
     public Integer collatz(int current, int step) {
         if (current < 1 || step < 1) {

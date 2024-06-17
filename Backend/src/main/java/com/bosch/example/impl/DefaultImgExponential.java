@@ -1,9 +1,9 @@
 package com.bosch.example.impl;
 
 import com.bosch.example.dto.ImgExponentialResult;
-import com.bosch.example.services.ImgExponential;
+import com.bosch.example.services.ImgExponentialService;
 
-public class DefaultImgExponential implements ImgExponential {
+public class DefaultImgExponential implements ImgExponentialService {
     @Override
     public ImgExponentialResult calculate(Long A, Long b) {
         Double Re = A * Math.sin(b);
