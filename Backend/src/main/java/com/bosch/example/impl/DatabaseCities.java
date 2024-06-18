@@ -8,7 +8,7 @@ import com.bosch.example.model.City;
 import com.bosch.example.repositories.CitiesJPARepository;
 import com.bosch.example.services.CitiesService;
 
-public class DatabaseCitiesService implements CitiesService {
+public class DatabaseCities implements CitiesService {
     @Autowired
     CitiesJPARepository repo;
 
