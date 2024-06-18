@@ -5,12 +5,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 import com.bosch.example.impl.DatabaseCitiesService;
+import com.bosch.example.impl.DatabaseCreateUser;
 import com.bosch.example.impl.DefaultCollatz;
 import com.bosch.example.impl.DefaultCwbRegister;
 import com.bosch.example.impl.DefaultImgExponential;
 import com.bosch.example.impl.DefaultReverse;
 import com.bosch.example.services.CitiesService;
 import com.bosch.example.services.CollatzService;
+import com.bosch.example.services.CreateUserService;
 import com.bosch.example.services.CwbRegisterService;
 import com.bosch.example.services.ImgExponentialService;
 import com.bosch.example.services.ReverseService;
@@ -45,5 +47,11 @@ public class DependenciesConfiguration {
     @Scope("singleton")
     public CitiesService citiesService() {
         return new DatabaseCitiesService();
+    }
+
+    @Bean
+    @Scope("singleton")
+    public CreateUserService createUserService() {
+        return new DatabaseCreateUser();
     }
 }

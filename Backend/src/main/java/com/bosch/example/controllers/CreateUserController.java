@@ -14,7 +14,7 @@ public class CreateUserController {
     CreateUserService repo;
 
     @PostMapping("create")
-    public void postMethodUser(@RequestBody CreateUser user) {
-        repo.save(user);
+    public String postMethodUser(@RequestBody CreateUser user) {
+        return repo.save(user);
     }
 }
